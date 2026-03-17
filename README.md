@@ -45,11 +45,7 @@ I'm keeping this updated as I learn more. If you've found something that works, 
 
 If you've found a good practice that belongs here. It can be a workflow, a pattern, a tool, a tip from someone in the community. Please feel free to open a PR or an issue.
 
-**Guidelines:**
-- Keep it actionable. "Do X when Y" beats "X is important"
-- Credit the source where you can (Twitter handle, blog, repo)
-- Add it to the right file and update `00-index.md` if needed
-- Don't add things that sound good in theory, only what you've seen work in practice
+
 
 This repo grows through people sharing what actually works. If something in here is wrong or outdated, flag it.
 
