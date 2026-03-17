@@ -56,3 +56,4 @@ This repo grows through people sharing what actually works. If something in here
 Actively updated. Started March 2026.
 
 Sources include: Anthropic's official guides, practitioner tweets, community blogs and personal experience building with Claude Code
+

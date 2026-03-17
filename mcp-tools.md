@@ -80,7 +80,7 @@ Add each server as a new block inside `mcpServers`. Restart Claude Code after an
 - Fetches full stack traces and breadcrumbs directly into context
 - Remote hosted at `https://mcp.sentry.dev/mcp` (OAuth auth)
 
-### 🗄️ Databases
+### �-�️ Databases
 **PostgreSQL MCP**
 - Natural language queries — no switching to a SQL client
 - Claude explores table structure, understands relationships, runs queries
@@ -141,3 +141,4 @@ Add each server as a new block inside `mcpServers`. Restart Claude Code after an
 - Connect Gemini + Codex as local review tools alongside Claude
 - Push to GitHub early → Cursor Bug Bot reviews
 - Fresh Claude context = better review (no bias toward its own code)
+

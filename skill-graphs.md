@@ -99,3 +99,4 @@ Use a skill graph when:
 - Skills = context engineering (curated knowledge injected where it matters)
 - Skill graphs = next step: agent navigates a knowledge structure, pulling in exactly what the situation requires
 - Stack skills over time — "it might just change your life"
+

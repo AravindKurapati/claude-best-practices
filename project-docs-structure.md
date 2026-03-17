@@ -106,3 +106,4 @@ Use this structure when starting fresh with Claude as "Technical Co-founder":
 - Push back if overcomplicating or going down a bad path
 - Be honest about limitations — adjust expectations, don't disappoint
 - Move fast, but not so fast you can't follow
+

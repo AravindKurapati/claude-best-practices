@@ -133,3 +133,4 @@ Self-improving skills via observation loop (cognee-skills)
 ## Official Reference
 Full 33-page guide: `resources.anthropic.com/hubfs/The-Complete-Guide-to-Building-Skills-for-Claude.pdf`
 → See `anthropic-skills-guide.md` in this knowledge base for distilled version
+

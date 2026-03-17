@@ -89,3 +89,4 @@ Don't try to consume all of this at once.
 - **Week 4** → Go deeper with the papers. Pick one newsletter and stay consistent.
 
 The people winning in AI aren't smarter. They just started reading earlier.
+

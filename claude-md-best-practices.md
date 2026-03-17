@@ -51,3 +51,4 @@
 ## Per-Folder Instructions
 - Create `discussion/` and `decisions/` subfolders per topic
 - Instruct Claude to save a summary of discussion + decision after each commit
+

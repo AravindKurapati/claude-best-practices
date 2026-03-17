@@ -154,3 +154,4 @@ Install as a Claude Code plugin. Works with Codex and OpenCode too.
 - `mksglu/claude-context-mode` — bigger context window via reference loading
 - `claude-warden` — protection against destructive actions
 - `arscontexta` — builds skill graphs (249-file knowledge system)
+

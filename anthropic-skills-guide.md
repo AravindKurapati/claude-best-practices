@@ -87,3 +87,4 @@ Apply all skill authoring best practices to CLAUDE.md. Same principles:
 - Short, focused, intent-driven
 - Progressive disclosure (lazy load sub-files)
 - Description/trigger logic determines what Claude loads
+
