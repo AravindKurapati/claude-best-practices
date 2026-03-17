@@ -43,7 +43,7 @@ I'm keeping this updated as I learn more. If you've found something that works, 
 
 ## Contributing
 
-If you've found a best practice that belongs here. It can be a workflow, a pattern, a tool, a tip from someone in the community. Please feel free to open a PR or an issue.
+If you've found a good practice that belongs here. It can be a workflow, a pattern, a tool, a tip from someone in the community. Please feel free to open a PR or an issue.
 
 **Guidelines:**
 - Keep it actionable. "Do X when Y" beats "X is important"
