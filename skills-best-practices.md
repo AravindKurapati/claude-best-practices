@@ -129,6 +129,14 @@ Self-improving skills via observation loop (cognee-skills)
 - Dynamic graph view: `cognee-graph-skills.vercel.app`
 
 ---
+### Autoresearch in Practice (Karpathy method applied to skills)
+- Define a checklist of 3–6 yes/no scoring questions - what "good output" looks like
+- Agent runs skill -> scores output -> makes one change -> keeps if score improves, reverts if not -> repeats
+- Stops at 95%+ score three times in a row
+- Outputs: improved skill file, results log, changelog of every attempted change
+- The changelog is the most durable artifact - hand it to a smarter model later and it picks up where the last one left off
+- Works on anything scorable: prompts, cold outreach, newsletter intros, page load time
+- Source: aisolo.beehiiv.com
 
 ## Official Reference
 Full 33-page guide: `resources.anthropic.com/hubfs/The-Complete-Guide-to-Building-Skills-for-Claude.pdf`

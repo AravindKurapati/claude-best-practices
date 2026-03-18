@@ -18,4 +18,6 @@
 
 \- Added Exa MCP and GitHub MCP setup guides
 
-
+- `<important if>` conditional attention pattern to claude-md-best-practices.md
+- Security audit parallel agent pattern to agentic-workflow-best-practices.md  
+- Autoresearch practical implementation notes to skills-best-practices.md (Self-Improving Skills section)

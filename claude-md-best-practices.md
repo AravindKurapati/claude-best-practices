@@ -52,3 +52,8 @@
 - Create `discussion/` and `decisions/` subfolders per topic
 - Instruct Claude to save a summary of discussion + decision after each commit
 
+## Conditional Attention Steering
+- Wrap sections in `<important if="condition">` tags to signal relevance
+- Claude Code wraps CLAUDE.md in a `<system_reminder>` that says contents "may or may not be relevant"  longer files = more sections treated as optional
+- `<important if="writing tests">` tells the model to pay attention only when testing
+- More reliable than hoping Claude infers relevance from a long list of rules

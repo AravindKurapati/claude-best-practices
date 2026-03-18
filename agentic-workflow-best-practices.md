@@ -47,7 +47,7 @@ Mental model: AGENTS.md is the city map. Agent.md is your apartment address. INS
 ---
 
 ## Parallel Sub-Agents
-Most people run Claude Code linearly - don't.
+Most people run Claude Code linearly....don't.
 
 **Level 1 - Multiple terminal sessions (start here)**
 - Open multiple terminal tabs, run `claude` in each
@@ -77,6 +77,11 @@ Orchestrator
 - Only relevant once you're regularly running 3+ agents simultaneously
 
 ---
+## Security Audit Pattern
+- After big code changes: "Check this project for critical vulnerabilities. Ignore non-severe."
+- Use parallel sub-agents per attack surface (secrets/keys, auth bypass, injection/XSS)
+- Use strong models (Opus) to find issues, cheaper models (Sonnet/Haiku) to fix them
+- Each agent runs independently - faster and doesn't pollute main context
 
 ## Planning Before Coding
 - For any non-trivial feature: shift-tab into planning mode first
