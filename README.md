@@ -41,6 +41,7 @@ I'm keeping this updated as I learn more. If you've found something that works, 
 | [`skill-graphs.md`](./skill-graphs.md) | Wikilink networks, MOCs, when single skill files aren't enough |
 | [`mcp-tools.md`](./mcp-tools.md) | MCP server setup, Exa, GitHub, and more |
 | [`learning-resources.md`](./learning-resources.md) | Books, papers, videos, courses, newsletters |
+| [`claude-code-2026-update.md`](./claude-code-2026-update.md) | **NEW** - Hooks, Auto Mode, scheduled tasks, BMAD, Skills 2.0 evals, MCP lazy loading, agent teams, context management |
 
 ---
 
@@ -59,4 +60,3 @@ This repo grows through people sharing what actually works. If something in here
 Actively updated. Started March 2026.
 
 Sources include: Anthropic's official guides, practitioner tweets, community blogs and personal experience building with Claude Code
-
