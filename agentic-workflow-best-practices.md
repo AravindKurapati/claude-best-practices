@@ -25,13 +25,13 @@ Most teams write SKILL.md and INSTRUCTIONS.md naturally. What teams consistently
 
 ```
 repo/
-├── AGENTS.md                  ← System map. Who exists. How they connect.
+├── AGENTS.md                  <- System map. Who exists. How they connect.
 └── agents/
     └── analyst/
-        ├── Agent.md           ← I am analyst-agent. I report to orchestrator.
-        ├── INSTRUCTIONS.md    ← Step 1: validate. Step 2: compute. Never hallucinate.
+        ├── Agent.md           <- I am analyst-agent. I report to orchestrator.
+        ├── INSTRUCTIONS.md    <- Step 1: validate. Step 2: compute. Never hallucinate.
         └── skills/
-            └── SKILL.md       ← How to run pandas analysis specifically.
+            └── SKILL.md       <- How to run pandas analysis specifically.
 ```
 
 **AGENTS.md** - the org chart. Lives at project root. Every agent reads it so they have a mental model of the whole system, not just their corner. Update it whenever you add or remove an agent.
@@ -77,6 +77,7 @@ Orchestrator
 - Only relevant once you're regularly running 3+ agents simultaneously
 
 ---
+
 ## Security Audit Pattern
 - After big code changes: "Check this project for critical vulnerabilities. Ignore non-severe."
 - Use parallel sub-agents per attack surface (secrets/keys, auth bypass, injection/XSS)
@@ -127,6 +128,139 @@ Surfaces patterns you didn't know you had. Use output to bootstrap initial skill
 
 ---
 
+## Thinking Budget Fixes (Claude Code Regression)
+The regression is real but fixable. Default thinking effort was made conservative — for complex multi-file work it's not enough. When thinking depth drops, Claude shifts from research-first to edit-first behavior.
+
+Three fixes:
+1. `/effort high` in your prompt (or `/effort max` on Opus for hard debugging)
+2. `~/.claude/settings.json` -> `"showThinkingSummaries": true` (see what Claude is actually reasoning about)
+3. Add to CLAUDE.md: `"Research the codebase before editing. Never change code you haven't read."`
+
+---
+
+## Claude Code Hooks
+Hooks are automatic actions that fire on every file edit or command run. Unlike CLAUDE.md (followed ~80% of the time), hooks are deterministic.
+
+Two types:
+- **PreToolUse** — runs before Claude acts. Exit code 2 blocks the action and sends your message back to Claude.
+- **PostToolUse** — runs after. Use for formatting, linting, logging.
+
+Config location: `.claude/settings.json` (project, committed to git) or `~/.claude/settings.json` (global).
+
+### Hook 1 — Auto-format on every edit
+Runs your formatter after every Write or Edit. Swap `prettier` for `black`, `gofmt`, `rustfmt` etc.
+
+```json
+{
+  "hooks": {
+    "PostToolUse": [
+      {
+        "matcher": "Write|Edit",
+        "hooks": [{ "type": "command", "command": "jq -r '.tool_input.file_path' | xargs npx prettier --write 2>/dev/null; exit 0" }]
+      }
+    ]
+  }
+}
+```
+
+### Hook 2 — Block dangerous commands
+Create `.claude/hooks/block-dangerous.sh`:
+
+```bash
+#!/usr/bin/env bash
+cmd=$(jq -r '.tool_input.command // ""')
+dangerous_patterns=("rm -rf" "git reset --hard" "git push.*--force" "DROP TABLE" "DROP DATABASE" "curl.*|.*sh" "wget.*|.*bash")
+for pattern in "${dangerous_patterns[@]}"; do
+  if echo "$cmd" | grep -qiE "$pattern"; then
+    echo "Blocked: '$cmd' matches '$pattern'. Propose a safer alternative." >&2
+    exit 2
+  fi
+done
+exit 0
+```
+
+```json
+{
+  "hooks": {
+    "PreToolUse": [
+      { "matcher": "Bash", "hooks": [{ "type": "command", "command": ".claude/hooks/block-dangerous.sh" }] }
+    ]
+  }
+}
+```
+
+### Hook 3 — Protect sensitive files
+Create `.claude/hooks/protect-files.sh`:
+
+```bash
+#!/usr/bin/env bash
+file=$(jq -r '.tool_input.file_path // .tool_input.path // ""')
+protected=(".env*" ".git/*" "package-lock.json" "yarn.lock" "*.pem" "*.key" "secrets/*")
+for pattern in "${protected[@]}"; do
+  if echo "$file" | grep -qiE "^${pattern//\*/.*}$"; then
+    echo "Blocked: '$file' is protected." >&2; exit 2
+  fi
+done
+exit 0
+```
+
+```json
+{
+  "hooks": {
+    "PreToolUse": [
+      { "matcher": "Edit|Write", "hooks": [{ "type": "command", "command": ".claude/hooks/protect-files.sh" }] }
+    ]
+  }
+}
+```
+
+### Hook 4 — Log every command
+Create `.claude/hooks/log-commands.sh`:
+
+```bash
+#!/usr/bin/env bash
+cmd=$(jq -r '.tool_input.command // ""')
+printf '%s %s\n' "$(date -Is)" "$cmd" >> .claude/command-log.txt
+exit 0
+```
+
+Add `.claude/command-log.txt` to `.gitignore`. Useful for debugging Modal runs or any long agentic session.
+
+### Combined settings.json
+```json
+{
+  "hooks": {
+    "PreToolUse": [
+      {
+        "matcher": "Bash",
+        "hooks": [
+          { "type": "command", "command": ".claude/hooks/block-dangerous.sh" },
+          { "type": "command", "command": ".claude/hooks/log-commands.sh" }
+        ]
+      },
+      {
+        "matcher": "Edit|Write",
+        "hooks": [{ "type": "command", "command": ".claude/hooks/protect-files.sh" }]
+      }
+    ],
+    "PostToolUse": [
+      {
+        "matcher": "Write|Edit",
+        "hooks": [
+          { "type": "command", "command": "jq -r '.tool_input.file_path' | xargs npx prettier --write 2>/dev/null; exit 0" }
+        ]
+      }
+    ]
+  }
+}
+```
+
+Make scripts executable: `chmod +x .claude/hooks/*.sh`
+
+Full docs: `code.claude.com/docs/en/hooks`
+
+---
+
 ## Superpowers (Pre-built Skill Pack)
 GitHub repo with 40.9k stars - a complete development methodology as skills.
 
@@ -159,4 +293,3 @@ Install as a Claude Code plugin. Works with Codex and OpenCode too.
 - `mksglu/claude-context-mode` - bigger context window via reference loading
 - `claude-warden` - protection against destructive actions
 - `arscontexta` - builds skill graphs (249-file knowledge system)
-
