@@ -128,8 +128,24 @@ Surfaces patterns you didn't know you had. Use output to bootstrap initial skill
 
 ---
 
+## Session Memory Pattern
+Claude has no memory between sessions by default. Three approaches, in order of complexity:
+
+**Manual (recommended first):** Keep a `state.md` in your project. At session end, ask Claude to update it with what changed, what's pending, and any decisions made. Lazy-load it from CLAUDE.md. Low overhead, full control.
+
+**Automated via claude-mem (community tool):**
+- `npx claude-mem install` - wraps session state management automatically
+- Saves context after each session, injects it at the start of the next
+- 39k+ GitHub stars; community-built, not Anthropic
+- Caution: inspect what it writes to your CLAUDE.md before trusting it - it has write access to your project files
+- Best for: solo projects where you don't want to manage state.md manually
+
+**When you already use state.md + architecture.md:** claude-mem adds marginal value. The manual pattern covers 90% of the same benefit with less magic.
+
+---
+
 ## Thinking Budget Fixes (Claude Code Regression)
-The regression is real but fixable. Default thinking effort was made conservative — for complex multi-file work it's not enough. When thinking depth drops, Claude shifts from research-first to edit-first behavior.
+The regression is real but fixable. Default thinking effort was made conservative - for complex multi-file work it's not enough. When thinking depth drops, Claude shifts from research-first to edit-first behavior.
 
 Three fixes:
 1. `/effort high` in your prompt (or `/effort max` on Opus for hard debugging)
@@ -142,12 +158,12 @@ Three fixes:
 Hooks are automatic actions that fire on every file edit or command run. Unlike CLAUDE.md (followed ~80% of the time), hooks are deterministic.
 
 Two types:
-- **PreToolUse** — runs before Claude acts. Exit code 2 blocks the action and sends your message back to Claude.
-- **PostToolUse** — runs after. Use for formatting, linting, logging.
+- **PreToolUse** - runs before Claude acts. Exit code 2 blocks the action and sends your message back to Claude.
+- **PostToolUse** - runs after. Use for formatting, linting, logging.
 
 Config location: `.claude/settings.json` (project, committed to git) or `~/.claude/settings.json` (global).
 
-### Hook 1 — Auto-format on every edit
+### Hook 1 - Auto-format on every edit
 Runs your formatter after every Write or Edit. Swap `prettier` for `black`, `gofmt`, `rustfmt` etc.
 
 ```json
@@ -163,7 +179,7 @@ Runs your formatter after every Write or Edit. Swap `prettier` for `black`, `gof
 }
 ```
 
-### Hook 2 — Block dangerous commands
+### Hook 2 - Block dangerous commands
 Create `.claude/hooks/block-dangerous.sh`:
 
 ```bash
@@ -189,7 +205,7 @@ exit 0
 }
 ```
 
-### Hook 3 — Protect sensitive files
+### Hook 3 - Protect sensitive files
 Create `.claude/hooks/protect-files.sh`:
 
 ```bash
@@ -214,7 +230,7 @@ exit 0
 }
 ```
 
-### Hook 4 — Log every command
+### Hook 4 - Log every command
 Create `.claude/hooks/log-commands.sh`:
 
 ```bash
@@ -285,7 +301,7 @@ Install as a Claude Code plugin. Works with Codex and OpenCode too.
 ---
 
 ## Claude Code Shortcuts
-- **`!` prefix** - runs bash inline, command + output land directly in context
+- **`!` prefix** - runs bash inline, command + output land directly in context (note: `!` only works inside Claude Code terminal, not PowerShell/bash directly)
 - **`Ctrl+S`** - stashes current draft, pops back after you send something else
 - **`Ctrl+G`** - opens prompt in `$EDITOR` for bigger edits
 
