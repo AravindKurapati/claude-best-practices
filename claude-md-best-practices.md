@@ -6,11 +6,11 @@
 - Not a memory dump - architectural grounding for every session
 - CLAUDE.md is injected into context on EVERY interaction - every token here costs you reasoning space
 
-## Keep It Short (50–150 lines max)
+## Keep It Short (50-150 lines max)
 - A 50-line file with clear architectural intent beats a 1,000-line file of "don't do X" patches
 - Negations ("don't use X", "never do Y") dilute important directives and hurt performance
 - The model has to parse through hundreds of negations - important directives get diluted
-- Rule of thumb: over 150 lines → rewrite from scratch
+- Rule of thumb: over 150 lines -> rewrite from scratch
 - A/B tested: short + intentional >> long + patchy
 
 ## Rewrite Periodically
@@ -23,16 +23,16 @@
 ## Lazy Loading via Sub-files
 - Keep CLAUDE.md at ~100 lines by offloading domain-specific instructions
 - Pattern: write "read API.md when touching API routes" inside CLAUDE.md
-- Claude only loads sub-files when actually needed → saves context
+- Claude only loads sub-files when actually needed -> saves context
 - Example sub-files: `API.md`, `PAYMENTS.md`, `AUTH.md`, `SCHEMA.md`
 
 ## State + Architecture Files
 - Add `architecture.md` and `state.md` as lazy-loaded sub-files for medium-to-large codebases
-- **architecture.md**: key design decisions, patterns in use, constraints, major module boundaries — loaded when touching cross-cutting concerns
-- **state.md**: current work-in-progress, recent migrations, known tech debt, pending decisions — updated after each significant session
+- **architecture.md**: key design decisions, patterns in use, constraints, major module boundaries - loaded when touching cross-cutting concerns
+- **state.md**: current work-in-progress, recent migrations, known tech debt, pending decisions - updated after each significant session
 - Pattern in CLAUDE.md: `"Read architecture.md before proposing structural changes. Read state.md at the start of any session that touches the data layer."`
 - These two files dramatically cut wrong-assumption errors without bloating CLAUDE.md itself
-- Keep `state.md` short (< 30 lines) and date-stamped — it goes stale fast; treat it like a ship's log
+- Keep `state.md` short (< 30 lines) and date-stamped - it goes stale fast; treat it like a ship's log
 
 ## What to Reference from CLAUDE.md
 - Link to all `/documents/*.md` files (platform-docs, styleguide, ICPs, roadmap, data-reference)
@@ -50,6 +50,12 @@
 **Spec-first:**
 > "For every non-trivial code change, write a spec file first (FEATURE_xyz.md). Include impact on database structure. Update SCHEMA.md when needed."
 
+**Simplicity first (from Karpathy observations):**
+> "Write the minimum code that solves the problem. No speculative features, no abstractions for single-use code, no configurability that wasn't requested. If 200 lines could be 50, rewrite it. Test: would a senior engineer call this overcomplicated?"
+
+**Surgical changes (from Karpathy observations):**
+> "Touch only what the task requires. Don't refactor adjacent code, improve unrelated comments, or delete pre-existing dead code. If you notice unrelated issues, mention them - don't fix them. Every changed line should trace directly to the request."
+
 ## Global vs Project CLAUDE.md
 - `~/.claude/CLAUDE.md` - universal rules true for every project (Exa policy, bug-fix rule, ask-vs-act)
 - `your-project/CLAUDE.md` - project-specific architecture, lazy-loads /documents/
@@ -62,6 +68,12 @@
 
 ## Conditional Attention Steering
 - Wrap sections in `<important if="condition">` tags to signal relevance
-- Claude Code wraps CLAUDE.md in a `<system_reminder>` that says contents "may or may not be relevant"  longer files = more sections treated as optional
+- Claude Code wraps CLAUDE.md in a `<system_reminder>` that says contents "may or may not be relevant" - longer files = more sections treated as optional
 - `<important if="writing tests">` tells the model to pay attention only when testing
 - More reliable than hoping Claude infers relevance from a long list of rules
+
+## Community Starting Points
+- **andrej-karpathy-skills** - CLAUDE.md derived from Karpathy's LLM failure observations. Four principles: think before coding, simplicity first, surgical changes, goal-driven execution. Repo: `github.com/forrestchang/andrej-karpathy-skills`
+  - Install per-project: `curl https://raw.githubusercontent.com/forrestchang/andrej-karpathy-skills/main/CLAUDE.md >> CLAUDE.md`
+  - Or as plugin (global): `/plugin install andrej-karpathy-skills@karpathy-skills`
+  - Recommendation: cherry-pick simplicity + surgical changes rules rather than taking the whole file wholesale
