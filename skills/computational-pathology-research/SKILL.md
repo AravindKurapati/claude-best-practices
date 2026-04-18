@@ -2,7 +2,7 @@
 name: computational-pathology-research
 description: >
   Researches computational pathology and health AI literature using HuggingFace
-  Papers API and web search. Use when user says "find papers on", "research",
+  Papers MCP and Exa web search. Use when user says "find papers on", "research",
   "what's the latest on", "literature review", "survey", or asks about methods
   like MIL, SSL, WSI analysis, attention-based pooling, patch embedding, weakly
   supervised learning in pathology, or asks about specific tasks like tumor
@@ -19,10 +19,12 @@ context: fork
 
 ## Overview
 Researches computational pathology and health AI literature. Runs parallel searches
-across HuggingFace Papers, Semantic Scholar, and web sources. Triages by relevance
-and recency, fetches full methodology and results sections, and synthesizes findings
-into actionable research context. Teaches the model how to think about the literature,
-not just retrieve it.
+across HuggingFace Papers (academic, arXiv same-day) and Exa (web, practitioner content,
+implementation notes). Triages by relevance and recency, fetches full methodology and
+results sections, and synthesizes findings into actionable research context. Teaches
+the model how to think about the literature, not just retrieve it.
+
+**Requires:** `hf-papers` MCP + `exa` MCP both configured. See `mcp-tools.md` Research Stack section.
 
 ---
 
@@ -37,14 +39,26 @@ Before searching, decompose the user's topic into 4-5 keyword variants covering:
 - Any recent trend angle (e.g. "foundation model pathology", "weakly supervised pathology 2024")
 
 ### Step 2: Run parallel searches
-Search HuggingFace Papers API and Exa/web simultaneously using the keyword variants.
+Search HF Papers MCP and Exa simultaneously using the keyword variants.
+
+**HF Papers MCP** (`hf-papers`) - use for:
+- Academic papers, arXiv preprints, peer-reviewed work
+- Same-day coverage of new preprints
+- Finding papers by method name, task, or dataset
+
+**Exa MCP** (`exa`, `web_search_exa` + `deep_researcher`) - use for:
+- Practitioner blog posts, implementation notes
+- GitHub repos with working code
+- Broader web coverage for applied/industry content
+- Cross-reference when HF Papers coverage is sparse
+
 For each result, note: title, authors, date, abstract snippet, venue/preprint.
 
 Priority venues to weight higher:
 - MICCAI, CVPR, NeurIPS, ICLR, ECCV (top ML/vision)
 - Nature Methods, Nature Medicine, Cancer Cell (high-impact clinical)
 - Medical Image Analysis, IEEE TMI (domain journals)
-- arXiv cs.CV, eess.IV (preprints — check date, weight recent)
+- arXiv cs.CV, eess.IV (preprints - check date, weight recent)
 
 Deprioritize: workshop papers without follow-up, preprints older than 18 months with low citation signal.
 
@@ -57,7 +71,7 @@ For each paper, score on three axes (quick pass, not deep read):
 Keep top 5-8 papers. Discard the rest.
 
 ### Step 4: Fetch and read methodology + results
-For the top papers, fetch full content. Read specifically:
+For the top papers, fetch full content via HF Papers or Exa crawl. Read specifically:
 - **Methodology**: what exactly they did, what datasets, what backbone/architecture
 - **Results**: key numbers (AUC, F1, C-index, etc.) and what they compared against
 - **Limitations**: what they explicitly acknowledge doesn't work
@@ -117,7 +131,7 @@ After synthesis, answer: given this landscape, how should the user think about t
 ## Output Format
 - Lead with state of the art (1 paragraph)
 - Method landscape as a comparison table where possible
-- Key papers as a ranked list: `[Title](link) — one-line summary. Key result.`
+- Key papers as a ranked list: `[Title](link) - one-line summary. Key result.`
 - Open problems as bullet points
 - Research framing at the end, clearly labeled
 - Total length: 400-800 words unless deep dive requested
@@ -128,5 +142,6 @@ After synthesis, answer: given this landscape, how should the user think about t
 ## Edge Cases
 - **Too broad a query** (e.g. "research deep learning in pathology"): narrow to one task or method family before searching. Ask the user if unclear.
 - **Very recent topic with few papers** (e.g. a method from last month): note the gap, fall back to closest related work, flag that the field is moving fast.
-- **User asks for a specific paper**: fetch it directly, don't run the full pipeline.
-- **Conflicting results across papers**: surface the conflict explicitly. Don't pick a winner — describe what conditions favor each approach.
+- **User asks for a specific paper**: fetch it directly via HF Papers MCP, don't run the full pipeline.
+- **Conflicting results across papers**: surface the conflict explicitly. Don't pick a winner - describe what conditions favor each approach.
+- **HF Papers MCP unavailable**: fall back to Exa `deep_researcher` for academic content. Note the fallback in output.

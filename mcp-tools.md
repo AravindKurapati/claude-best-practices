@@ -49,13 +49,31 @@ Add each server as a new block inside `mcpServers`. Restart Claude Code after an
 
 ## Recommended Servers by Category
 
-### 🔍 Search & Research
-**Exa MCP** ← install this first
+### Search & Research
+**Exa MCP** <- install this first
 - Better quality and faster than Claude's built-in search
 - Has its own index with date filters for fresh results (not stale training data)
 - Key tools: `web_search_exa`, `get_code_context_exa` (real code from GitHub/SO/docs), `company_research`, `crawling`, `deep_researcher`
 - Get API key: `dashboard.exa.ai/api-keys` (free tier available)
 - Add to global CLAUDE.md: "For all search and research, use Exa MCP. Do not use built-in web search."
+
+**HuggingFace Papers MCP** <- essential for AI/ML research
+- Hybrid semantic search over AI/ML papers indexed from arXiv, same-day coverage
+- Outperforms Google Scholar for recent preprints (2024-2025 especially)
+- Key advantage: parallel keyword variant searches surface papers single queries miss
+- Pairs with a research skill that handles triage + synthesis - retrieval layer only
+- Use case: finding SSL pretraining papers, MIL variants, foundation model comparisons, any comp path / health AI literature
+- Install:
+
+```json
+"hf-papers": {
+  "command": "npx",
+  "args": ["-y", "@huggingface/mcp-server-papers"]
+}
+```
+
+- Wire into research skills: tell the skill to use `hf-papers` for academic search and Exa for broader web/practitioner content
+- The `computational-pathology-research` skill in `skills/` is pre-wired to use this
 
 **Context7**
 - Injects up-to-date, version-specific docs and real code examples into context
@@ -69,8 +87,8 @@ Add each server as a new block inside `mcpServers`. Restart Claude Code after an
 }
 ```
 
-###  Code & Version Control
-**GitHub MCP** ← most universally useful after Exa
+### Code & Version Control
+**GitHub MCP** <- most universally useful after Exa
 - Claude gets direct access to your repos
 - Read issues, review PRs, search across repos, automate workflows - without leaving terminal
 - Supports read-only lockdown mode to prevent accidental changes to production
@@ -80,7 +98,7 @@ Add each server as a new block inside `mcpServers`. Restart Claude Code after an
 - Fetches full stack traces and breadcrumbs directly into context
 - Remote hosted at `https://mcp.sentry.dev/mcp` (OAuth auth)
 
-###  Databases
+### Databases
 **PostgreSQL MCP**
 - Natural language queries - no switching to a SQL client
 - Claude explores table structure, understands relationships, runs queries
@@ -90,32 +108,63 @@ Add each server as a new block inside `mcpServers`. Restart Claude Code after an
 - Combines Postgres, auth, and storage in one
 - Best for full-stack developers building modern backend apps
 
-###  Memory
-**Memory MCP** ← most underrated category
+### Memory
+**Memory MCP** <- most underrated category
 - Claude goes from "tool I explain things to every session" -> "collaborator who knows my projects"
 - Changes the whole relationship - context carries over sessions
 - Makes every other MCP more powerful
 
-###  Design
+### Design
 **Figma MCP**
 - Extract design specs, access component libraries, sync design tokens
 - Ask: "convert this Figma layout to React components" -> production-ready code
 - Install: `npx @composio/mcp@latest setup figma --client claude`
 
-###  Product & Analytics
+### Product & Analytics
 **PostHog MCP**
 - Access feature flags, user funnels, A/B test results inside Claude Code
 - Make code decisions based on actual user behavior, not assumptions
 
-###  Project Management
+### Project Management
 **Atlassian MCP (Jira + Confluence)**
 - Search tickets, update statuses, create tickets from PR descriptions or bug reports
 - Pull Confluence docs alongside your code - no more IDE/Jira context switching
 
-###  Automation
+### Automation
 **Zapier MCP**
 - Connect Claude to any app Zapier supports (Slack, Gmail, Trello, etc.)
 - Trigger cross-app workflows from inside Claude Code
+
+---
+
+## Research Stack (AI/ML Focus)
+For active ML research work, this combo covers academic + practitioner sources:
+
+```json
+{
+  "mcpServers": {
+    "hf-papers": {
+      "command": "npx",
+      "args": ["-y", "@huggingface/mcp-server-papers"]
+    },
+    "exa": {
+      "command": "npx",
+      "args": ["-y", "exa-mcp-server"],
+      "env": { "EXA_API_KEY": "your-key-here" }
+    },
+    "github": {
+      "command": "npx",
+      "args": ["-y", "@modelcontextprotocol/server-github"],
+      "env": { "GITHUB_PERSONAL_ACCESS_TOKEN": "your-token-here" }
+    }
+  }
+}
+```
+
+- HF Papers -> academic retrieval (arXiv, same-day)
+- Exa -> broader web, blog posts, implementation notes, practitioner content
+- GitHub -> code search, repo READMEs, actual implementations
+- Pair with the `computational-pathology-research` skill for the synthesis + triage layer on top
 
 ---
 
@@ -141,4 +190,3 @@ Add each server as a new block inside `mcpServers`. Restart Claude Code after an
 - Connect Gemini + Codex as local review tools alongside Claude
 - Push to GitHub early -> Cursor Bug Bot reviews
 - Fresh Claude context = better review (no bias toward its own code)
-
