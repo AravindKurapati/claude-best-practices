@@ -45,11 +45,17 @@ Get it wrong -> skill sits there doing nothing.
 
 `context: fork` - use for search-heavy or output-heavy skills. Runs in isolated context, doesn't pollute the main window.
 
+## YAML Trigger Rules (The 3 That Matter)
+1. **Be pushy about activation** - Claude is conservative. List 5-7 explicit trigger phrases. Be embarrassingly explicit.
+2. **Include negative boundaries** - Tell Claude when NOT to fire: "Do NOT use for X, Y, Z." Prevents hijacking unrelated conversations.
+3. **Write in third person** - "Generates proposals..." not "I can help with proposals..." Third person is how Claude processes skill descriptions most reliably.
+
 ## Core Design Principles
 1. **Context window is a public good** - be lean
 2. **Claude is already smart** - give it structure, not hand-holding
 3. **Progressive disclosure** - minimal instructions first, reference deeper docs only when needed
 4. **Keep SKILL.md under 5,000 words** - offload to `references/` if you exceed this
+5. **Every instruction must be specific and testable** - "Format nicely" is untestable. "Use H2 headings, bold the first sentence, keep paragraphs under 3 sentences" is testable.
 
 ## The 3 Skill Categories
 1. **Workflow Automation** - repeatable multi-step processes (sprint planning, onboarding, CI/CD)
@@ -85,6 +91,29 @@ From experienced Claude Code users:
 - `/prd-to-issues` - break a PRD into trackable tickets
 - `/tdd` - enforce test-driven development workflow
 - `/improve-my-codebase` - systematic codebase improvement pass
+
+---
+
+## The 5 Skill Failure Modes (Diagnostic Taxonomy)
+
+Every broken skill fails in one of five ways. Identify the mode, the fix is obvious.
+
+| # | Failure Mode | Symptom | Root Cause | Fix |
+|---|---|---|---|---|
+| 1 | **Silent Skill** | Skill never fires | YAML description too weak; doesn't match user's words | Add more trigger phrases; be embarrassingly explicit |
+| 2 | **Hijacker** | Fires on unrelated requests | Description too broad; missing negative boundaries | Add "Do NOT use for X, Y, Z" — tighten trigger phrases |
+| 3 | **Drifter** | Correct trigger, wrong output | Instructions are ambiguous; multiple valid interpretations | Replace every vague instruction with a specific, testable one |
+| 4 | **Fragile Skill** | Works on clean inputs, breaks on edge cases | Edge case handling incomplete | Feed it worst-case inputs; add explicit "If [condition], then [action]" rules |
+| 5 | **Overachiever** | Adds unsolicited content | Instructions say what TO do but not what NOT to do | Add scope constraints: "Output ONLY [format]. Do NOT add commentary." |
+
+### Testing Protocol (Run Before Every Deploy)
+1. **Happy path** - clean, complete input. Does it produce expected output?
+2. **Minimal input** - bare minimum a user might provide. Does it ask for what it needs?
+3. **Edge case input** - unusual/contradictory/multilingual/typo inputs. Does it handle gracefully?
+4. **Negative test** - request that should NOT trigger the skill. Does it stay silent?
+5. **Repeat test** - same input, three times. Is output consistent? If not, instructions are ambiguous.
+
+Fix every failure. Update SKILL.md. Test again. Ship only when all five pass consistently.
 
 ---
 
@@ -129,8 +158,9 @@ Self-improving skills via observation loop (cognee-skills)
 - Dynamic graph view: `cognee-graph-skills.vercel.app`
 
 ---
+
 ### Autoresearch in Practice (Karpathy method applied to skills)
-- Define a checklist of 3–6 yes/no scoring questions - what "good output" looks like
+- Define a checklist of 3-6 yes/no scoring questions - what "good output" looks like
 - Agent runs skill -> scores output -> makes one change -> keeps if score improves, reverts if not -> repeats
 - Stops at 95%+ score three times in a row
 - Outputs: improved skill file, results log, changelog of every attempted change
@@ -141,4 +171,3 @@ Self-improving skills via observation loop (cognee-skills)
 ## Official Reference
 Full 33-page guide: `resources.anthropic.com/hubfs/The-Complete-Guide-to-Building-Skills-for-Claude.pdf`
 -> See `anthropic-skills-guide.md` in this knowledge base for distilled version
-
