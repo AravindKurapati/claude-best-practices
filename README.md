@@ -2,8 +2,7 @@
 
 A living knowledge base of best practices for working with Claude, Claude Code, skills, MCP tools, and agentic workflows that I PERSONALLY collected from practitioners, researchers and the community.
 
-This is different from ecosystem trackers or reference indexes. Everything here is 
-there  for people who are learning, not people who already know the landscape.
+This is different from ecosystem trackers or reference indexes. Everything here is there for people who are learning, not people who already know the landscape.
 
 ---
 
@@ -11,7 +10,7 @@ there  for people who are learning, not people who already know the landscape.
 
 This repo is a personal knowledge base I've been building while learning Claude Code and agentic workflows. Everything here comes from real practitioners sharing what actually works.... Twitter threads, blog posts, Anthropic's official guides and my own experience.
 
-It's not a tutorial. It's a **decision guide**  organized so you can find the right practice for the situation you're in right now.
+It's not a tutorial. It's a **decision guide** organized so you can find the right practice for the situation you're in right now.
 
 I'm keeping this updated as I learn more. If you've found something that works, contributions are welcome.
 
@@ -19,10 +18,10 @@ I'm keeping this updated as I learn more. If you've found something that works, 
 
 ## How to Use This
 
-**Start with [`00-index.md`](./00-index.md)** it maps every common situation to the right file and section. Don't read everything at once. Find your situation, go to the relevant file.
+**Start with [`00-index.md`](./00-index.md)** — it maps every common situation to the right file and section. Don't read everything at once. Find your situation, go to the relevant file.
 
 **With Claude Code:** point Claude at this repo before starting work:
-> "Read my knowledge base at github.com/[your-username]/claude-best-practices and use it to inform how we work together."
+> "Read my knowledge base at github.com/AravindKurapati/claude-best-practices and use it to inform how we work together."
 
 **With claude.ai Projects:** upload the `.md` files to your Project Knowledge so Claude can reference them in chat.
 
@@ -47,9 +46,7 @@ I'm keeping this updated as I learn more. If you've found something that works, 
 
 ## Contributing
 
-If you've found a good practice that belongs here. It can be a workflow, a pattern, a tool, a tip from someone in the community. Please feel free to open a PR or an issue.
-
-
+If you've found a good practice that belongs here — a workflow, a pattern, a tool, a tip from someone in the community — please feel free to open a PR or an issue.
 
 This repo grows through people sharing what actually works. If something in here is wrong or outdated, flag it.
 
@@ -59,4 +56,4 @@ This repo grows through people sharing what actually works. If something in here
 
 Actively updated. Started March 2026.
 
-Sources include: Anthropic's official guides, practitioner tweets, community blogs and personal experience building with Claude Code
+Sources include: Anthropic's official guides, practitioner tweets, community blogs and personal experience building with Claude Code.
