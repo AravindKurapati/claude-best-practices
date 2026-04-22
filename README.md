@@ -52,26 +52,6 @@ These visuals turn the repo into something you can scan faster than a long READM
 
 ![Repository Architecture](docs/visuals/repo-architecture.svg)
 
-### Concept Dependency Graph
-
-![Concept Dependency Graph](docs/visuals/concept-dependency-graph.svg)
-
-### Learning Roadmap
-
-![Learning Roadmap](docs/visuals/learning-roadmap.svg)
-
-### Use-Case Matrix
-
-![Use-Case Matrix](docs/visuals/use-case-matrix.svg)
-
-### Practice Evolution Timeline
-
-![Practice Evolution Timeline](docs/visuals/evolution-timeline.svg)
-
-### Skill and Tooling Ecosystem
-
-![Skill and Tooling Ecosystem](docs/visuals/ecosystem-map.svg)
-
 ### Knowledge Map
 
 ![Knowledge Map](docs/knowledge-map.svg)
