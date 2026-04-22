@@ -44,78 +44,12 @@ I'm keeping this updated as I learn more. If you've found something that works, 
 
 ---
 Knowledge Map
-<p align="center">
-<svg width="720" viewBox="0 0 720 640" xmlns="http://www.w3.org/2000/svg">
-<!-- Background -->
-<rect x="0" y="0" width="720" height="640" rx="8" fill="#0d1117"/>
-<!-- Grid dots -->
-<circle cx="40" cy="40" r="1" fill="#21262d"/><circle cx="80" cy="40" r="1" fill="#21262d"/><circle cx="120" cy="40" r="1" fill="#21262d"/>
-<circle cx="40" cy="80" r="1" fill="#21262d"/><circle cx="80" cy="80" r="1" fill="#21262d"/><circle cx="120" cy="80" r="1" fill="#21262d"/>
-<circle cx="600" cy="40" r="1" fill="#21262d"/><circle cx="640" cy="40" r="1" fill="#21262d"/><circle cx="680" cy="40" r="1" fill="#21262d"/>
-<circle cx="600" cy="80" r="1" fill="#21262d"/><circle cx="640" cy="80" r="1" fill="#21262d"/><circle cx="680" cy="80" r="1" fill="#21262d"/>
-<circle cx="40" cy="560" r="1" fill="#21262d"/><circle cx="80" cy="560" r="1" fill="#21262d"/>
-<circle cx="640" cy="560" r="1" fill="#21262d"/><circle cx="680" cy="560" r="1" fill="#21262d"/>
-<!-- CENTER NODE -->
-<rect x="264" y="272" width="192" height="58" rx="8" fill="#161b6e" stroke="#58a6ff" stroke-width="1.2"/>
-<text x="360" y="295" text-anchor="middle" font-family="ui-monospace,SFMono-Regular,monospace" font-size="13" font-weight="500" fill="#79c0ff">00-index.md</text>
-<text x="360" y="316" text-anchor="middle" font-family="ui-monospace,SFMono-Regular,monospace" font-size="11" fill="#8b949e">decision guide · start here</text>
-<!-- TOP: AGENTIC / CLAUDE CODE -->
-<rect x="44" y="40" width="188" height="54" rx="6" fill="#0d2626" stroke="#3fb950" stroke-width="1"/>
-<text x="138" y="62" text-anchor="middle" font-family="ui-monospace,SFMono-Regular,monospace" font-size="12" font-weight="500" fill="#3fb950">agentic-workflow</text>
-<text x="138" y="80" text-anchor="middle" font-family="ui-monospace,SFMono-Regular,monospace" font-size="10" fill="#7ee787">planning · agents · bugs</text>
-<rect x="266" y="40" width="188" height="54" rx="6" fill="#0d2626" stroke="#3fb950" stroke-width="1"/>
-<text x="360" y="62" text-anchor="middle" font-family="ui-monospace,SFMono-Regular,monospace" font-size="12" font-weight="500" fill="#3fb950">claude-code-2026</text>
-<text x="360" y="80" text-anchor="middle" font-family="ui-monospace,SFMono-Regular,monospace" font-size="10" fill="#7ee787">hooks · auto mode · BMAD</text>
-<rect x="488" y="40" width="188" height="54" rx="6" fill="#0d2626" stroke="#3fb950" stroke-width="1"/>
-<text x="582" y="62" text-anchor="middle" font-family="ui-monospace,SFMono-Regular,monospace" font-size="11" font-weight="500" fill="#3fb950">claude-md-best-practices</text>
-<text x="582" y="80" text-anchor="middle" font-family="ui-monospace,SFMono-Regular,monospace" font-size="10" fill="#7ee787">line limits · lazy loading</text>
-<!-- LEFT: SKILLS -->
-<rect x="28" y="188" width="182" height="54" rx="6" fill="#2a1800" stroke="#d29922" stroke-width="1"/>
-<text x="119" y="210" text-anchor="middle" font-family="ui-monospace,SFMono-Regular,monospace" font-size="12" font-weight="500" fill="#e3b341">skills-best-practices</text>
-<text x="119" y="228" text-anchor="middle" font-family="ui-monospace,SFMono-Regular,monospace" font-size="10" fill="#f0c060">authoring · skill-creator</text>
-<rect x="28" y="308" width="182" height="54" rx="6" fill="#2a1800" stroke="#d29922" stroke-width="1"/>
-<text x="119" y="330" text-anchor="middle" font-family="ui-monospace,SFMono-Regular,monospace" font-size="12" font-weight="500" fill="#e3b341">anthropic-skills-guide</text>
-<text x="119" y="348" text-anchor="middle" font-family="ui-monospace,SFMono-Regular,monospace" font-size="10" fill="#f0c060">official 33-page distilled</text>
-<rect x="28" y="428" width="182" height="54" rx="6" fill="#2a1800" stroke="#d29922" stroke-width="1"/>
-<text x="119" y="450" text-anchor="middle" font-family="ui-monospace,SFMono-Regular,monospace" font-size="12" font-weight="500" fill="#e3b341">skill-graphs</text>
-<text x="119" y="468" text-anchor="middle" font-family="ui-monospace,SFMono-Regular,monospace" font-size="10" fill="#f0c060">wikilinks · MOCs · depth</text>
-<!-- RIGHT: INFRA / LEARNING -->
-<rect x="510" y="188" width="182" height="54" rx="6" fill="#0d1f3c" stroke="#388bfd" stroke-width="1"/>
-<text x="601" y="210" text-anchor="middle" font-family="ui-monospace,SFMono-Regular,monospace" font-size="12" font-weight="500" fill="#79c0ff">mcp-tools</text>
-<text x="601" y="228" text-anchor="middle" font-family="ui-monospace,SFMono-Regular,monospace" font-size="10" fill="#a5d6ff">Exa · GitHub · setup</text>
-<rect x="510" y="308" width="182" height="54" rx="6" fill="#0d1f3c" stroke="#388bfd" stroke-width="1"/>
-<text x="601" y="330" text-anchor="middle" font-family="ui-monospace,SFMono-Regular,monospace" font-size="11" font-weight="500" fill="#79c0ff">project-docs-structure</text>
-<text x="601" y="348" text-anchor="middle" font-family="ui-monospace,SFMono-Regular,monospace" font-size="10" fill="#a5d6ff">/documents/ · onboarding</text>
-<rect x="510" y="428" width="182" height="54" rx="6" fill="#0d1f3c" stroke="#388bfd" stroke-width="1"/>
-<text x="601" y="450" text-anchor="middle" font-family="ui-monospace,SFMono-Regular,monospace" font-size="12" font-weight="500" fill="#79c0ff">learning-resources</text>
-<text x="601" y="468" text-anchor="middle" font-family="ui-monospace,SFMono-Regular,monospace" font-size="10" fill="#a5d6ff">books · papers · courses</text>
-<!-- BOTTOM: META -->
-<rect x="200" y="528" width="320" height="54" rx="6" fill="#161b22" stroke="#30363d" stroke-width="1"/>
-<text x="360" y="550" text-anchor="middle" font-family="ui-monospace,SFMono-Regular,monospace" font-size="11" font-weight="500" fill="#8b949e">AravindKurapati/claude-best-practices</text>
-<text x="360" y="568" text-anchor="middle" font-family="ui-monospace,SFMono-Regular,monospace" font-size="10" fill="#6e7681">started Mar 2026 · actively updated</text>
-<!-- EDGES: center to top -->
-<line x1="306" y1="272" x2="186" y2="94" stroke="#30363d" stroke-width="1"/>
-<line x1="360" y1="272" x2="360" y2="94" stroke="#30363d" stroke-width="1"/>
-<line x1="414" y1="272" x2="534" y2="94" stroke="#30363d" stroke-width="1"/>
-<!-- EDGES: center to left -->
-<line x1="264" y1="290" x2="210" y2="215" stroke="#30363d" stroke-width="1"/>
-<line x1="264" y1="301" x2="210" y2="335" stroke="#30363d" stroke-width="1"/>
-<line x1="264" y1="316" x2="210" y2="455" stroke="#30363d" stroke-width="1"/>
-<!-- EDGES: center to right -->
-<line x1="456" y1="290" x2="510" y2="215" stroke="#30363d" stroke-width="1"/>
-<line x1="456" y1="301" x2="510" y2="335" stroke="#30363d" stroke-width="1"/>
-<line x1="456" y1="316" x2="510" y2="455" stroke="#30363d" stroke-width="1"/>
-<!-- EDGE: center to bottom -->
-<line x1="360" y1="330" x2="360" y2="528" stroke="#30363d" stroke-width="1"/>
-<!-- LEGEND -->
-<rect x="36" y="606" width="10" height="10" rx="2" fill="#0d2626" stroke="#3fb950" stroke-width="0.8"/>
-<text x="52" y="615" font-family="ui-monospace,SFMono-Regular,monospace" font-size="10" fill="#8b949e">Agentic / Claude Code</text>
-<rect x="210" y="606" width="10" height="10" rx="2" fill="#2a1800" stroke="#d29922" stroke-width="0.8"/>
-<text x="226" y="615" font-family="ui-monospace,SFMono-Regular,monospace" font-size="10" fill="#8b949e">Skills</text>
-<rect x="286" y="606" width="10" height="10" rx="2" fill="#0d1f3c" stroke="#388bfd" stroke-width="0.8"/>
-<text x="302" y="615" font-family="ui-monospace,SFMono-Regular,monospace" font-size="10" fill="#8b949e">Infrastructure / Learning</text>
-</svg>
-</p>
+
+This is how it looks like!
+
+![Knowledge Map](docs/knowledge-map.svg)
+
+
 ## Contributing
 
 If you've found a good practice that belongs here — a workflow, a pattern, a tool, a tip from someone in the community — please feel free to open a PR or an issue.
