@@ -1,0 +1,41 @@
+<svg width="960" height="720" viewBox="0 0 960 720" xmlns="http://www.w3.org/2000/svg">
+  <rect width="960" height="720" rx="24" fill="#0d1117"/>
+  <text x="56" y="64" fill="#f0f6fc" font-family="Segoe UI, Arial, sans-serif" font-size="30" font-weight="700">Learning Roadmap</text>
+  <text x="56" y="94" fill="#8b949e" font-family="Segoe UI, Arial, sans-serif" font-size="16">A maturity path from first contact to advanced repo usage.</text>
+
+  <line x1="140" y1="380" x2="820" y2="380" stroke="#30363d" stroke-width="8" stroke-linecap="round"/>
+  <circle cx="170" cy="380" r="18" fill="#58a6ff"/>
+  <circle cx="390" cy="380" r="18" fill="#3fb950"/>
+  <circle cx="610" cy="380" r="18" fill="#d29922"/>
+  <circle cx="820" cy="380" r="18" fill="#f85149"/>
+
+  <rect x="78" y="170" width="184" height="156" rx="18" fill="#0d1f3c" stroke="#58a6ff" stroke-width="2"/>
+  <text x="170" y="208" text-anchor="middle" fill="#79c0ff" font-family="Segoe UI, Arial, sans-serif" font-size="22" font-weight="700">Stage 1</text>
+  <text x="170" y="240" text-anchor="middle" fill="#f0f6fc" font-family="Segoe UI, Arial, sans-serif" font-size="18">Orient</text>
+  <text x="170" y="272" text-anchor="middle" fill="#8b949e" font-family="Segoe UI, Arial, sans-serif" font-size="14">Read 00-index.md</text>
+  <text x="170" y="294" text-anchor="middle" fill="#8b949e" font-family="Segoe UI, Arial, sans-serif" font-size="14">Scan README and files</text>
+  <text x="170" y="316" text-anchor="middle" fill="#8b949e" font-family="Segoe UI, Arial, sans-serif" font-size="14">Pick one problem to solve</text>
+
+  <rect x="298" y="434" width="184" height="156" rx="18" fill="#0d2626" stroke="#3fb950" stroke-width="2"/>
+  <text x="390" y="472" text-anchor="middle" fill="#7ee787" font-family="Segoe UI, Arial, sans-serif" font-size="22" font-weight="700">Stage 2</text>
+  <text x="390" y="504" text-anchor="middle" fill="#f0f6fc" font-family="Segoe UI, Arial, sans-serif" font-size="18">Apply</text>
+  <text x="390" y="536" text-anchor="middle" fill="#8b949e" font-family="Segoe UI, Arial, sans-serif" font-size="14">Use workflow docs</text>
+  <text x="390" y="558" text-anchor="middle" fill="#8b949e" font-family="Segoe UI, Arial, sans-serif" font-size="14">Try skill authoring patterns</text>
+  <text x="390" y="580" text-anchor="middle" fill="#8b949e" font-family="Segoe UI, Arial, sans-serif" font-size="14">Build repeatable habits</text>
+
+  <rect x="518" y="170" width="184" height="156" rx="18" fill="#2a1800" stroke="#d29922" stroke-width="2"/>
+  <text x="610" y="208" text-anchor="middle" fill="#f2cc60" font-family="Segoe UI, Arial, sans-serif" font-size="22" font-weight="700">Stage 3</text>
+  <text x="610" y="240" text-anchor="middle" fill="#f0f6fc" font-family="Segoe UI, Arial, sans-serif" font-size="18">Extend</text>
+  <text x="610" y="272" text-anchor="middle" fill="#8b949e" font-family="Segoe UI, Arial, sans-serif" font-size="14">Connect MCP tools</text>
+  <text x="610" y="294" text-anchor="middle" fill="#8b949e" font-family="Segoe UI, Arial, sans-serif" font-size="14">Organize deeper skill graphs</text>
+  <text x="610" y="316" text-anchor="middle" fill="#8b949e" font-family="Segoe UI, Arial, sans-serif" font-size="14">Adapt repo patterns locally</text>
+
+  <rect x="728" y="434" width="184" height="156" rx="18" fill="#2d1117" stroke="#f85149" stroke-width="2"/>
+  <text x="820" y="472" text-anchor="middle" fill="#ff7b72" font-family="Segoe UI, Arial, sans-serif" font-size="22" font-weight="700">Stage 4</text>
+  <text x="820" y="504" text-anchor="middle" fill="#f0f6fc" font-family="Segoe UI, Arial, sans-serif" font-size="18">Operate</text>
+  <text x="820" y="536" text-anchor="middle" fill="#8b949e" font-family="Segoe UI, Arial, sans-serif" font-size="14">Ship your own systems</text>
+  <text x="820" y="558" text-anchor="middle" fill="#8b949e" font-family="Segoe UI, Arial, sans-serif" font-size="14">Maintain a living knowledge base</text>
+  <text x="820" y="580" text-anchor="middle" fill="#8b949e" font-family="Segoe UI, Arial, sans-serif" font-size="14">Contribute back with evidence</text>
+
+  <text x="56" y="654" fill="#8b949e" font-family="Segoe UI, Arial, sans-serif" font-size="15">The roadmap is designed as a progressive path, but readers can jump straight to the stage matching their immediate problem.</text>
+</svg>

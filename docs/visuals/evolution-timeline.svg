@@ -1,0 +1,40 @@
+<svg width="1120" height="620" viewBox="0 0 1120 620" xmlns="http://www.w3.org/2000/svg">
+  <rect width="1120" height="620" rx="24" fill="#0d1117"/>
+  <text x="56" y="64" fill="#f0f6fc" font-family="Segoe UI, Arial, sans-serif" font-size="30" font-weight="700">Practice Evolution Timeline</text>
+  <text x="56" y="94" fill="#8b949e" font-family="Segoe UI, Arial, sans-serif" font-size="16">How the repo story progresses from prompting basics to integrated agent systems.</text>
+
+  <line x1="96" y1="320" x2="1024" y2="320" stroke="#30363d" stroke-width="8" stroke-linecap="round"/>
+
+  <circle cx="150" cy="320" r="18" fill="#58a6ff"/>
+  <circle cx="350" cy="320" r="18" fill="#3fb950"/>
+  <circle cx="560" cy="320" r="18" fill="#d29922"/>
+  <circle cx="770" cy="320" r="18" fill="#db6d28"/>
+  <circle cx="970" cy="320" r="18" fill="#f85149"/>
+
+  <rect x="74" y="160" width="152" height="108" rx="18" fill="#0d1f3c" stroke="#58a6ff"/>
+  <text x="150" y="196" text-anchor="middle" fill="#79c0ff" font-family="Segoe UI, Arial, sans-serif" font-size="18" font-weight="700">Foundation</text>
+  <text x="150" y="224" text-anchor="middle" fill="#f0f6fc" font-family="Segoe UI, Arial, sans-serif" font-size="14">Prompt structure</text>
+  <text x="150" y="246" text-anchor="middle" fill="#f0f6fc" font-family="Segoe UI, Arial, sans-serif" font-size="14">Indexing guidance</text>
+
+  <rect x="274" y="362" width="152" height="108" rx="18" fill="#0d2626" stroke="#3fb950"/>
+  <text x="350" y="398" text-anchor="middle" fill="#7ee787" font-family="Segoe UI, Arial, sans-serif" font-size="18" font-weight="700">Workflow</text>
+  <text x="350" y="426" text-anchor="middle" fill="#f0f6fc" font-family="Segoe UI, Arial, sans-serif" font-size="14">Planning loops</text>
+  <text x="350" y="448" text-anchor="middle" fill="#f0f6fc" font-family="Segoe UI, Arial, sans-serif" font-size="14">Parallel agents</text>
+
+  <rect x="484" y="160" width="152" height="108" rx="18" fill="#2a1800" stroke="#d29922"/>
+  <text x="560" y="196" text-anchor="middle" fill="#f2cc60" font-family="Segoe UI, Arial, sans-serif" font-size="18" font-weight="700">Skill Era</text>
+  <text x="560" y="224" text-anchor="middle" fill="#f0f6fc" font-family="Segoe UI, Arial, sans-serif" font-size="14">Skill authoring</text>
+  <text x="560" y="246" text-anchor="middle" fill="#f0f6fc" font-family="Segoe UI, Arial, sans-serif" font-size="14">Graph depth</text>
+
+  <rect x="694" y="362" width="152" height="108" rx="18" fill="#31200f" stroke="#db6d28"/>
+  <text x="770" y="398" text-anchor="middle" fill="#ffa657" font-family="Segoe UI, Arial, sans-serif" font-size="18" font-weight="700">Tooling Era</text>
+  <text x="770" y="426" text-anchor="middle" fill="#f0f6fc" font-family="Segoe UI, Arial, sans-serif" font-size="14">MCP servers</text>
+  <text x="770" y="448" text-anchor="middle" fill="#f0f6fc" font-family="Segoe UI, Arial, sans-serif" font-size="14">Project context design</text>
+
+  <rect x="894" y="160" width="152" height="108" rx="18" fill="#2d1117" stroke="#f85149"/>
+  <text x="970" y="196" text-anchor="middle" fill="#ff7b72" font-family="Segoe UI, Arial, sans-serif" font-size="18" font-weight="700">Agent Systems</text>
+  <text x="970" y="224" text-anchor="middle" fill="#f0f6fc" font-family="Segoe UI, Arial, sans-serif" font-size="14">Auto mode</text>
+  <text x="970" y="246" text-anchor="middle" fill="#f0f6fc" font-family="Segoe UI, Arial, sans-serif" font-size="14">Scheduled tasks and teams</text>
+
+  <text x="56" y="552" fill="#8b949e" font-family="Segoe UI, Arial, sans-serif" font-size="15">The timeline is conceptual rather than date-specific: it describes how practices mature as teams move from manual prompting into agentic operations.</text>
+</svg>
