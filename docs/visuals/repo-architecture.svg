@@ -1,0 +1,56 @@
+<svg width="960" height="720" viewBox="0 0 960 720" xmlns="http://www.w3.org/2000/svg">
+  <rect width="960" height="720" rx="24" fill="#0d1117"/>
+  <text x="56" y="64" fill="#f0f6fc" font-family="Segoe UI, Arial, sans-serif" font-size="30" font-weight="700">Repository Architecture</text>
+  <text x="56" y="94" fill="#8b949e" font-family="Segoe UI, Arial, sans-serif" font-size="16">How user goals map into docs, skills, and operational tooling.</text>
+
+  <rect x="56" y="134" width="848" height="126" rx="20" fill="#111827" stroke="#30363d"/>
+  <text x="84" y="170" fill="#79c0ff" font-family="Segoe UI, Arial, sans-serif" font-size="18" font-weight="700">Layer 1 - User Intent</text>
+  <rect x="84" y="190" width="184" height="44" rx="12" fill="#0d1f3c" stroke="#58a6ff"/>
+  <rect x="286" y="190" width="184" height="44" rx="12" fill="#0d1f3c" stroke="#58a6ff"/>
+  <rect x="488" y="190" width="184" height="44" rx="12" fill="#0d1f3c" stroke="#58a6ff"/>
+  <rect x="690" y="190" width="184" height="44" rx="12" fill="#0d1f3c" stroke="#58a6ff"/>
+  <text x="176" y="218" text-anchor="middle" fill="#f0f6fc" font-family="Segoe UI, Arial, sans-serif" font-size="15">Find the right doc</text>
+  <text x="378" y="218" text-anchor="middle" fill="#f0f6fc" font-family="Segoe UI, Arial, sans-serif" font-size="15">Improve workflows</text>
+  <text x="580" y="218" text-anchor="middle" fill="#f0f6fc" font-family="Segoe UI, Arial, sans-serif" font-size="15">Design better skills</text>
+  <text x="782" y="218" text-anchor="middle" fill="#f0f6fc" font-family="Segoe UI, Arial, sans-serif" font-size="15">Build MCP systems</text>
+
+  <rect x="56" y="292" width="848" height="198" rx="20" fill="#111827" stroke="#30363d"/>
+  <text x="84" y="328" fill="#3fb950" font-family="Segoe UI, Arial, sans-serif" font-size="18" font-weight="700">Layer 2 - Knowledge Modules</text>
+  <rect x="84" y="350" width="234" height="116" rx="16" fill="#0d2626" stroke="#3fb950"/>
+  <rect x="362" y="350" width="234" height="116" rx="16" fill="#2a1800" stroke="#d29922"/>
+  <rect x="640" y="350" width="234" height="116" rx="16" fill="#0d1f3c" stroke="#388bfd"/>
+  <text x="201" y="382" text-anchor="middle" fill="#7ee787" font-family="Segoe UI, Arial, sans-serif" font-size="18" font-weight="700">Guiding Index</text>
+  <text x="201" y="410" text-anchor="middle" fill="#f0f6fc" font-family="Segoe UI, Arial, sans-serif" font-size="14">00-index.md</text>
+  <text x="201" y="436" text-anchor="middle" fill="#8b949e" font-family="Segoe UI, Arial, sans-serif" font-size="13">Routes readers to the right</text>
+  <text x="201" y="456" text-anchor="middle" fill="#8b949e" font-family="Segoe UI, Arial, sans-serif" font-size="13">practice, doc, or section.</text>
+  <text x="479" y="382" text-anchor="middle" fill="#f2cc60" font-family="Segoe UI, Arial, sans-serif" font-size="18" font-weight="700">Practice Libraries</text>
+  <text x="479" y="410" text-anchor="middle" fill="#f0f6fc" font-family="Segoe UI, Arial, sans-serif" font-size="14">skills-best-practices.md</text>
+  <text x="479" y="430" text-anchor="middle" fill="#f0f6fc" font-family="Segoe UI, Arial, sans-serif" font-size="14">agentic-workflow-best-practices.md</text>
+  <text x="479" y="456" text-anchor="middle" fill="#8b949e" font-family="Segoe UI, Arial, sans-serif" font-size="13">Reusable tactics for planning,</text>
+  <text x="479" y="476" text-anchor="middle" fill="#8b949e" font-family="Segoe UI, Arial, sans-serif" font-size="13">skills, debugging, and execution.</text>
+  <text x="757" y="382" text-anchor="middle" fill="#79c0ff" font-family="Segoe UI, Arial, sans-serif" font-size="18" font-weight="700">Reference Depth</text>
+  <text x="757" y="410" text-anchor="middle" fill="#f0f6fc" font-family="Segoe UI, Arial, sans-serif" font-size="14">mcp-tools.md</text>
+  <text x="757" y="430" text-anchor="middle" fill="#f0f6fc" font-family="Segoe UI, Arial, sans-serif" font-size="14">learning-resources.md</text>
+  <text x="757" y="456" text-anchor="middle" fill="#8b949e" font-family="Segoe UI, Arial, sans-serif" font-size="13">Deep dives, setup guidance,</text>
+  <text x="757" y="476" text-anchor="middle" fill="#8b949e" font-family="Segoe UI, Arial, sans-serif" font-size="13">and external source material.</text>
+
+  <rect x="56" y="522" width="848" height="142" rx="20" fill="#111827" stroke="#30363d"/>
+  <text x="84" y="558" fill="#d2a8ff" font-family="Segoe UI, Arial, sans-serif" font-size="18" font-weight="700">Layer 3 - Outputs and Operating Loop</text>
+  <rect x="84" y="580" width="168" height="52" rx="12" fill="#161b22" stroke="#6e7681"/>
+  <rect x="274" y="580" width="168" height="52" rx="12" fill="#161b22" stroke="#6e7681"/>
+  <rect x="464" y="580" width="168" height="52" rx="12" fill="#161b22" stroke="#6e7681"/>
+  <rect x="654" y="580" width="220" height="52" rx="12" fill="#161b22" stroke="#6e7681"/>
+  <text x="168" y="612" text-anchor="middle" fill="#f0f6fc" font-family="Segoe UI, Arial, sans-serif" font-size="14">Better prompts</text>
+  <text x="358" y="612" text-anchor="middle" fill="#f0f6fc" font-family="Segoe UI, Arial, sans-serif" font-size="14">Stronger skills</text>
+  <text x="548" y="612" text-anchor="middle" fill="#f0f6fc" font-family="Segoe UI, Arial, sans-serif" font-size="14">Repeatable workflows</text>
+  <text x="764" y="612" text-anchor="middle" fill="#f0f6fc" font-family="Segoe UI, Arial, sans-serif" font-size="14">Continuous repo updates</text>
+
+  <line x1="176" y1="234" x2="201" y2="350" stroke="#58a6ff" stroke-width="3"/>
+  <line x1="378" y1="234" x2="479" y2="350" stroke="#58a6ff" stroke-width="3"/>
+  <line x1="580" y1="234" x2="479" y2="350" stroke="#58a6ff" stroke-width="3"/>
+  <line x1="782" y1="234" x2="757" y2="350" stroke="#58a6ff" stroke-width="3"/>
+  <line x1="201" y1="466" x2="168" y2="580" stroke="#8b949e" stroke-width="3"/>
+  <line x1="479" y1="466" x2="358" y2="580" stroke="#8b949e" stroke-width="3"/>
+  <line x1="479" y1="466" x2="548" y2="580" stroke="#8b949e" stroke-width="3"/>
+  <line x1="757" y1="466" x2="764" y2="580" stroke="#8b949e" stroke-width="3"/>
+</svg>

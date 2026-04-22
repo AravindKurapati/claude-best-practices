@@ -44,6 +44,19 @@ I'm keeping this updated as I learn more. If you've found something that works, 
 
 ---
 
+## Visual Guides
+
+These visuals turn the repo into something you can scan faster than a long README section.
+
+### Repository Architecture
+
+![Repository Architecture](docs/visuals/repo-architecture.svg)
+
+### Knowledge Map
+
+![Knowledge Map](docs/knowledge-map.svg)
+
+
 ## Contributing
 
 If you've found a good practice that belongs here — a workflow, a pattern, a tool, a tip from someone in the community — please feel free to open a PR or an issue.
