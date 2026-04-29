@@ -1,5 +1,11 @@
 # Changelog
 
+## April 2026 (later)
+
+- Added `hooks-patterns.md` — deep dive covering all ~16 hook events (vs the 4 in `claude-code-2026-update.md`), four handler types including HTTP, JSON output schema fragmentation (PreToolUse `hookSpecificOutput` vs root-level `decision` for everything else), settings precedence, 10 patterns (state injection on SessionStart, secret redaction, safer-bash with input rewriting, Stop agent verifier, etc.), and 11 pitfalls
+- Updated `00-index.md` with 6 new decision entries: hooks (deterministic rules), state across compactions, scheduled tasks, auto mode, BMAD, MCP lazy loading — closing the gap the prior April changelog claimed but never delivered
+- Updated `00-index.md` and `README.md` file tables to list `hooks-patterns.md` and reflect that `claude-code-2026-update.md` is no longer the only hooks reference
+
 ## April 2026
 
 - Added `claude-code-2026-update.md` covering 10 new topics: hooks (command, prompt, agent types), auto mode, scheduled tasks (/loop + desktop + cloud), BMAD method, Skills 2.0 evals (5/6 degradation finding), MCP lazy loading + CLI install syntax, agent teams, context window management, universal workflow pattern (Research -> Plan -> Execute -> Review -> Ship), MCP ecosystem data (12K+ servers, Linux Foundation governance)
