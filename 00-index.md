@@ -51,6 +51,26 @@ A decision guide: what to read and when. Start here every session.
 → `portfolio-best-practices.md` — what hiring managers look for in 5 min
 → **Skill**: `project-launch-checklist` — automated audit (README, tests, CI/CD, eval, config, deployment)
 
+## I want a rule enforced 100% of the time (not 80% like CLAUDE.md)
+→ `hooks-patterns.md` — every hook event, the four handler types, JSON schema gotchas, pattern library
+→ `claude-code-2026-update.md` → Hooks section for the high-level overview
+
+## Claude keeps forgetting state across compactions / new sessions
+→ `hooks-patterns.md` → Pattern 3 (`SessionStart` + `compact` matcher injects `state.md` automatically)
+
+## I want background agents on a schedule (deploy checks, PR triage)
+→ `claude-code-2026-update.md` → Scheduled Tasks and /loop section (CLI vs Desktop vs Cloud)
+
+## I want Claude to auto-approve safe actions and only stop me on risky ones
+→ `claude-code-2026-update.md` → Auto Mode section
+→ Pair with `hooks-patterns.md` for non-negotiable hard boundaries
+
+## I want a structured AI-SDLC framework (PRDs, architecture docs, dev/QA agents)
+→ `claude-code-2026-update.md` → BMAD Method section
+
+## I have lots of MCP servers and context is bloating
+→ `claude-code-2026-update.md` → MCP Lazy Loading section + new `claude mcp add` CLI syntax
+
 ---
 
 ## File Map
@@ -63,7 +83,9 @@ A decision guide: what to read and when. Start here every session.
 | `project-docs-structure.md` | /documents/ folder, platform-docs, ICPs, styleguide, SCHEMA.md, vibe coding prompt, global vs project config |
 | `skill-graphs.md` | Wikilink networks, MOCs, progressive disclosure, arscontexta |
 | `mcp-tools.md` | Exa MCP setup, agency agents, plugins, Skills vs MCP distinction |
-| `portfolio-best-practices.md` | **NEW**: Hiring visibility signal, what managers look for, README strategy, checklist, red/green flags |
+| `portfolio-best-practices.md` | Hiring visibility signal, what managers look for, README strategy, checklist, red/green flags |
+| `claude-code-2026-update.md` | Hooks (overview), auto mode, scheduling, BMAD, Skills 2.0 evals, MCP lazy loading, agent teams, context management |
+| `hooks-patterns.md` | **NEW**: Hooks deep dive — every event, four handler types, JSON contract, schema gotchas, 10 patterns, pitfalls |
 | `learning-resources.md` | Books, papers, videos, repos, courses, newsletters for building agents |
 
 ## Skills Directory
