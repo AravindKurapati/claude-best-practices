@@ -58,6 +58,23 @@ These visuals turn the repo into something you can scan faster than a long READM
 ![Knowledge Map](docs/knowledge-map.svg)
 
 
+## Who This Is For
+
+- **Developers starting with Claude Code** who want to skip the trial-and-error phase and learn what practitioners have already figured out.
+- **Teams adopting agentic workflows** who need a decision framework, not just a feature list.
+- **Anyone building with skills, hooks, or MCP tools** who wants patterns that work in production, not just hello-world examples.
+
+---
+
+## Scope and Limitations
+
+- **Claude-focused** - covers Claude, Claude Code, and the Anthropic ecosystem; does not cover other LLM toolchains (Cursor, Copilot, etc.).
+- **Practitioner-sourced** - best practices come from real usage, not benchmarks; your mileage may vary on different project types.
+- **Snapshot in time** - Claude Code evolves fast; some guidance may lag behind the latest release. Check the CHANGELOG for recency.
+- **Not a tutorial** - assumes basic familiarity with Claude; explains *what to do*, not *what Claude is*.
+
+---
+
 ## Contributing
 
 If you've found a good practice that belongs here — a workflow, a pattern, a tool, a tip from someone in the community — please feel free to open a PR or an issue.
