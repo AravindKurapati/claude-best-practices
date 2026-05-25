@@ -41,7 +41,7 @@ I'm keeping this updated as I learn more. If you've found something that works, 
 | [`mcp-tools.md`](./mcp-tools.md) | MCP server setup, Exa, GitHub, and more |
 | [`learning-resources.md`](./learning-resources.md) | Books, papers, videos, courses, newsletters |
 | [`claude-code-2026-update.md`](./claude-code-2026-update.md) | Hooks, Auto Mode, scheduled tasks, BMAD, Skills 2.0 evals, MCP lazy loading, agent teams, context management |
-| [`hooks-patterns.md`](./hooks-patterns.md) | **NEW** - Hooks deep dive: every event, four handler types, JSON contract gotchas, pattern library, pitfalls |
+| [`hooks/`](./hooks/README.md) | Hooks deep dive — `README` (overview) + `events`, `handlers`, `contract`, `patterns`, `pitfalls` |
 
 ---
 

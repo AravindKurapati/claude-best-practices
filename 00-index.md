@@ -52,18 +52,18 @@ A decision guide: what to read and when. Start here every session.
 → **Skill**: `project-launch-checklist` — automated audit (README, tests, CI/CD, eval, config, deployment)
 
 ## I want a rule enforced 100% of the time (not 80% like CLAUDE.md)
-→ `hooks-patterns.md` — every hook event, the four handler types, JSON schema gotchas, pattern library
+→ `hooks/README.md` — overview + when-to-use-hook table, then drill into `events.md`, `handlers.md`, `contract.md`, `patterns.md`, `pitfalls.md`
 → `claude-code-2026-update.md` → Hooks section for the high-level overview
 
 ## Claude keeps forgetting state across compactions / new sessions
-→ `hooks-patterns.md` → Pattern 3 (`SessionStart` + `compact` matcher injects `state.md` automatically)
+→ `hooks/patterns.md` → Pattern 3 (`SessionStart` + `compact` matcher injects `state.md` automatically)
 
 ## I want background agents on a schedule (deploy checks, PR triage)
 → `claude-code-2026-update.md` → Scheduled Tasks and /loop section (CLI vs Desktop vs Cloud)
 
 ## I want Claude to auto-approve safe actions and only stop me on risky ones
 → `claude-code-2026-update.md` → Auto Mode section
-→ Pair with `hooks-patterns.md` for non-negotiable hard boundaries
+→ Pair with `hooks/patterns.md` for non-negotiable hard boundaries
 
 ## I want a structured AI-SDLC framework (PRDs, architecture docs, dev/QA agents)
 → `claude-code-2026-update.md` → BMAD Method section
@@ -85,13 +85,15 @@ A decision guide: what to read and when. Start here every session.
 | `mcp-tools.md` | Exa MCP setup, agency agents, plugins, Skills vs MCP distinction |
 | `portfolio-best-practices.md` | Hiring visibility signal, what managers look for, README strategy, checklist, red/green flags |
 | `claude-code-2026-update.md` | Hooks (overview), auto mode, scheduling, BMAD, Skills 2.0 evals, MCP lazy loading, agent teams, context management |
-| `hooks-patterns.md` | **NEW**: Hooks deep dive — every event, four handler types, JSON contract, schema gotchas, 10 patterns, pitfalls |
+| `hooks/` | Hooks deep dive — split across `README.md` (overview), `events.md`, `handlers.md`, `contract.md`, `patterns.md`, `pitfalls.md` |
 | `learning-resources.md` | Books, papers, videos, repos, courses, newsletters for building agents |
+| `docs/visuals/` + `docs/knowledge-map.svg` | Repository architecture diagram and knowledge map (linked from `README.md`) |
 
 ## Skills Directory
 | Skill | Purpose |
 |---|---|
-| `project-launch-checklist/` | **NEW**: Pre-launch audit for hiring visibility (README clarity, tests, CI/CD, eval, deployment) |
+| `project-launch-checklist/` | Pre-launch audit for hiring visibility (README clarity, tests, CI/CD, eval, deployment) |
+| `computational-pathology-research/` | Literature research over comp-path / health AI (HuggingFace Papers MCP + Exa); triggers on "find papers on", "literature review", MIL/SSL/WSI terms |
 
 ---
 
