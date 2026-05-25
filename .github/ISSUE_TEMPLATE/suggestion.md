@@ -22,7 +22,7 @@ assignees: ''
 
 \## Which file does it belong in?
 
-<!-- e.g. mcp-tools.md, skills-best-practices.md, or suggest a new file -->
+<!-- e.g. mcp-tools.md, skills-authoring.md, or suggest a new file -->
 
 
 

@@ -167,7 +167,7 @@ Anthropic ran their eval system against their own public document-creation skill
 ### Practical Takeaway
 - Eval your skills periodically, especially after model updates
 - If a skill constrains behavior the model now handles well by default, the skill may be hurting rather than helping
-- The self-improving skills pattern from `skills-best-practices.md` is now backed by official tooling
+- The self-improving skills pattern from `skills-authoring.md` is now backed by official tooling
 
 ---
 

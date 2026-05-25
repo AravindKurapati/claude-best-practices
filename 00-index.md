@@ -28,11 +28,11 @@ A decision guide: what to read and when. Start here every session.
 → Rule: write a reproducing test first, then fix, then prove with passing test
 
 ## I want to reuse a workflow across projects
-→ `skills-best-practices.md` — skill authoring, skill-creator, building from project docs
-→ `anthropic-skills-guide.md` — official patterns, YAML frontmatter, trigger descriptions
+→ `skills-authoring.md` — skill authoring, skill-creator, building from project docs
+→ `skills-official.md` — official patterns, YAML frontmatter, trigger descriptions
 
 ## My domain is too complex for a single skill file
-→ `skill-graphs.md` — wikilink networks, MOCs, progressive disclosure, arscontexta
+→ `skills-architecture.md` — wikilink networks, MOCs, progressive disclosure, arscontexta
 
 ## I need Claude to search the web inside Claude Code
 → `mcp-tools.md` → Exa MCP section + CLAUDE.md policy to force it
@@ -68,33 +68,13 @@ A decision guide: what to read and when. Start here every session.
 ## I want a structured AI-SDLC framework (PRDs, architecture docs, dev/QA agents)
 → `claude-code-2026-update.md` → BMAD Method section
 
-## I have lots of MCP servers and context is bloating
+## I want the deep mechanics of MCP (lifecycle, lazy loading, building servers, debugging)
+→ `mcp-patterns.md` — deep dive: transport modes, lazy loading, tool design, auth, debugging, pitfalls
 → `claude-code-2026-update.md` → MCP Lazy Loading section + new `claude mcp add` CLI syntax
 
----
-
-## File Map
-| File | What's Inside |
-|------|--------------|
-| `claude-md-best-practices.md` | Line limits, lazy loading, rewrite cadence, sub-file pattern |
-| `agentic-workflow-best-practices.md` | AGENTS.md config, planning mode, parallel agents, spec-first, bug handling, multi-LLM review |
-| `skills-best-practices.md` | Skill authoring, building from projects, skill-creator workflow |
-| `anthropic-skills-guide.md` | Official 33-page guide distilled: YAML frontmatter, trigger descriptions, design patterns, progressive disclosure |
-| `project-docs-structure.md` | /documents/ folder, platform-docs, ICPs, styleguide, SCHEMA.md, vibe coding prompt, global vs project config |
-| `skill-graphs.md` | Wikilink networks, MOCs, progressive disclosure, arscontexta |
-| `mcp-tools.md` | Exa MCP setup, agency agents, plugins, Skills vs MCP distinction |
-| `portfolio-best-practices.md` | Hiring visibility signal, what managers look for, README strategy, checklist, red/green flags |
-| `claude-code-2026-update.md` | Hooks (overview), auto mode, scheduling, BMAD, Skills 2.0 evals, MCP lazy loading, agent teams, context management |
-| `hooks/` | Hooks deep dive — split across `README.md` (overview), `events.md`, `handlers.md`, `contract.md`, `patterns.md`, `pitfalls.md` |
-| `learning-resources.md` | Books, papers, videos, repos, courses, newsletters for building agents |
-| `docs/visuals/` + `docs/knowledge-map.svg` | Repository architecture diagram and knowledge map (linked from `README.md`) |
-
-## Skills Directory
-| Skill | Purpose |
-|---|---|
-| `project-launch-checklist/` | Pre-launch audit for hiring visibility (README clarity, tests, CI/CD, eval, deployment) |
-| `computational-pathology-research/` | Literature research over comp-path / health AI (HuggingFace Papers MCP + Exa); triggers on "find papers on", "literature review", MIL/SSL/WSI terms |
+## Something isn't working (skill not triggering, hook not firing, MCP not loading, etc.)
+→ `troubleshooting.md` — symptom → fix mapping across CLAUDE.md, skills, hooks, MCP, subagents, context
 
 ---
 
-*Workflow: paste new tweets here → ask Claude to update the relevant file + this index.*
+*File catalog lives in [`README.md`](./README.md). Workflow: paste new tweets here → ask Claude to update the relevant file + this index.*

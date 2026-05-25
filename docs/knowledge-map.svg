@@ -24,13 +24,13 @@
 <text x="582" y="80" text-anchor="middle" font-family="ui-monospace,SFMono-Regular,monospace" font-size="10" fill="#7ee787">line limits · lazy loading</text>
 <!-- LEFT: SKILLS -->
 <rect x="28" y="188" width="182" height="54" rx="6" fill="#2a1800" stroke="#d29922" stroke-width="1"/>
-<text x="119" y="210" text-anchor="middle" font-family="ui-monospace,SFMono-Regular,monospace" font-size="12" font-weight="500" fill="#e3b341">skills-best-practices</text>
+<text x="119" y="210" text-anchor="middle" font-family="ui-monospace,SFMono-Regular,monospace" font-size="12" font-weight="500" fill="#e3b341">skills-authoring</text>
 <text x="119" y="228" text-anchor="middle" font-family="ui-monospace,SFMono-Regular,monospace" font-size="10" fill="#f0c060">authoring · skill-creator</text>
 <rect x="28" y="308" width="182" height="54" rx="6" fill="#2a1800" stroke="#d29922" stroke-width="1"/>
-<text x="119" y="330" text-anchor="middle" font-family="ui-monospace,SFMono-Regular,monospace" font-size="12" font-weight="500" fill="#e3b341">anthropic-skills-guide</text>
+<text x="119" y="330" text-anchor="middle" font-family="ui-monospace,SFMono-Regular,monospace" font-size="12" font-weight="500" fill="#e3b341">skills-official</text>
 <text x="119" y="348" text-anchor="middle" font-family="ui-monospace,SFMono-Regular,monospace" font-size="10" fill="#f0c060">official 33-page distilled</text>
 <rect x="28" y="428" width="182" height="54" rx="6" fill="#2a1800" stroke="#d29922" stroke-width="1"/>
-<text x="119" y="450" text-anchor="middle" font-family="ui-monospace,SFMono-Regular,monospace" font-size="12" font-weight="500" fill="#e3b341">skill-graphs</text>
+<text x="119" y="450" text-anchor="middle" font-family="ui-monospace,SFMono-Regular,monospace" font-size="12" font-weight="500" fill="#e3b341">skills-architecture</text>
 <text x="119" y="468" text-anchor="middle" font-family="ui-monospace,SFMono-Regular,monospace" font-size="10" fill="#f0c060">wikilinks · MOCs · depth</text>
 <!-- RIGHT: INFRA / LEARNING -->
 <rect x="510" y="188" width="182" height="54" rx="6" fill="#0d1f3c" stroke="#388bfd" stroke-width="1"/>
