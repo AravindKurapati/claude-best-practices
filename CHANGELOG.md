@@ -1,5 +1,12 @@
 # Changelog
 
+## May 2026
+
+- Split `hooks-patterns.md` (539 lines) into a `hooks/` directory: `README.md` (mental model + hooks-vs-CLAUDE.md/Skills/Permissions), `events.md`, `handlers.md`, `contract.md` (JSON + settings precedence), `patterns.md` (10 patterns + starter `settings.json`), `pitfalls.md` (+ refs). Same content, progressive disclosure instead of one monolith
+- Added `computational-pathology-research` to the Skills Directory in `00-index.md` (was on disk but unlisted)
+- Added `docs/visuals/` row to the `00-index.md` file map so the architecture diagram and knowledge map are discoverable
+- Updated `README.md` file table to point at `hooks/README.md` instead of the deleted `hooks-patterns.md`
+
 ## April 2026 (later)
 
 - Added `hooks-patterns.md` — deep dive covering all ~16 hook events (vs the 4 in `claude-code-2026-update.md`), four handler types including HTTP, JSON output schema fragmentation (PreToolUse `hookSpecificOutput` vs root-level `decision` for everything else), settings precedence, 10 patterns (state injection on SessionStart, secret redaction, safer-bash with input rewriting, Stop agent verifier, etc.), and 11 pitfalls
