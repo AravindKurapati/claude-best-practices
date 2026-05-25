@@ -34,14 +34,16 @@ I'm keeping this updated as I learn more. If you've found something that works, 
 | [`00-index.md`](./00-index.md) | Decision guide. Start here |
 | [`claude-md-best-practices.md`](./claude-md-best-practices.md) | CLAUDE.md line limits, lazy loading, rewrite cadence |
 | [`agentic-workflow-best-practices.md`](./agentic-workflow-best-practices.md) | Planning, parallel agents, bug handling, multi-agent structure |
-| [`skills-best-practices.md`](./skills-best-practices.md) | Skill authoring, skill-creator, self-improving skills |
-| [`anthropic-skills-guide.md`](./anthropic-skills-guide.md) | Anthropic's official 33-page guide distilled |
+| [`skills-authoring.md`](./skills-authoring.md) | Skill authoring, skill-creator, self-improving skills |
+| [`skills-official.md`](./skills-official.md) | Anthropic's official 33-page guide distilled |
 | [`project-docs-structure.md`](./project-docs-structure.md) | /documents/ folder, onboarding existing projects |
-| [`skill-graphs.md`](./skill-graphs.md) | Wikilink networks, MOCs, when single skill files aren't enough |
+| [`skills-architecture.md`](./skills-architecture.md) | Wikilink networks, MOCs, when single skill files aren't enough |
 | [`mcp-tools.md`](./mcp-tools.md) | MCP server setup, Exa, GitHub, and more |
 | [`learning-resources.md`](./learning-resources.md) | Books, papers, videos, courses, newsletters |
 | [`claude-code-2026-update.md`](./claude-code-2026-update.md) | Hooks, Auto Mode, scheduled tasks, BMAD, Skills 2.0 evals, MCP lazy loading, agent teams, context management |
 | [`hooks/`](./hooks/README.md) | Hooks deep dive — `README` (overview) + `events`, `handlers`, `contract`, `patterns`, `pitfalls` |
+| [`mcp-patterns.md`](./mcp-patterns.md) | MCP deep dive — transport modes, lazy loading, tool design, auth, debugging, pitfalls |
+| [`troubleshooting.md`](./troubleshooting.md) | Symptom → fix mapping for the common "X isn't working" cases across CLAUDE.md, skills, hooks, MCP |
 
 ---
 
